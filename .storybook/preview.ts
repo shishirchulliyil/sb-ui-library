@@ -1,6 +1,6 @@
 import type { Preview } from "@storybook/react";
-// Keep the name reset.css for the default behaviour of reset to load
-import "../src/assets/reset.css";
+
+import "../src/styles/global.css";
 
 const preview: Preview = {
   parameters: {
