@@ -1,11 +1,10 @@
-<h1>React Latest (Vite | TypeScript)</h1>
+<h1>Storybook - React Latest (Vite | TypeScript)</h1>
 
-<p>
-  This is project generated to serve as a reproduction starter for Storybook.
-</p>
+- This is a demo project created using the Storybook sandbox.
 
-<a  href="https://stackblitz.com/github/storybookjs/sandboxes/tree/next/react-vite/default-ts/after-storybook?preset=node=">
-  View it in Stackblitz
+
+<a  href="https://65a43155b101321e7d896ed2-uldrqvukkp.chromatic.com/?path=/docs/configure-your-project--docs">
+  Checkout the sb-ui-library
 </a>
 
 <h3>Testing instructions</h3>
@@ -19,6 +18,4 @@
 <pre>
   yarn storybook
 </pre>
-<a  href="https://65a43155b101321e7d896ed2-uldrqvukkp.chromatic.com/?path=/docs/configure-your-project--docs">
-  Checkout the sb-ui-library
-</a>
+
