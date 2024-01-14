@@ -8,10 +8,8 @@
   - Using autodocs for generating Documentation
   - Interactions using play.
 
-
-<a  href="https://65a43155b101321e7d896ed2-uldrqvukkp.chromatic.com/?path=/docs/configure-your-project--docs">
-  Checkout the sb-ui-library
-</a>
+- Checkout the sb-ui-library
+  - sb-ui-library (https://65a43155b101321e7d896ed2-uldrqvukkp.chromatic.com/?path=/docs/configure-your-project--docs)
 
 <h3>Testing instructions</h3>
 
