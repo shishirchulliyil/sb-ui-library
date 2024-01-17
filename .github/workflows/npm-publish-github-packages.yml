@@ -13,9 +13,14 @@ on:
 
 jobs:
   integration:
-    uses: 
+    uses: ./.github/workflows/chromatic.yml
+    permissions:
+       contents: read
+       checks: write
   
   build:
+    needs: [integration]
+   
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
