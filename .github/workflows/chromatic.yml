@@ -2,7 +2,9 @@
 
 name: "Chromatic"
 
-on: push
+on:
+  # allows you to run this workflow manually from the Actions tab
+  workflow_call:
 
 jobs:
   chromatic:
