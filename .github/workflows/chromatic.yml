@@ -1,11 +1,12 @@
 # .github/workflows/chromatic.yml
-
-name: "Chromatic"
+# deploys changes to chromatic and
+# published as npm package to github packages
+name: "deploy-and-publish"
 
 on: push
 
 jobs:
-  chromatic:
+  deploy-to-chromatic:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -15,8 +16,6 @@ jobs:
 
       - name: Install dependencies
         # ⚠️ Pick one of these, matching the package manager for your project
-        run: npm ci
-        run: pnpm install
         run: yarn install --immutable --immutable-cache --check-cache
 
       - name: Publish to Chromatic
@@ -24,3 +23,19 @@ jobs:
         with:
           # ⚠️ Make sure to configure a `CHROMATIC_PROJECT_TOKEN` repository secret
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+  publish:
+    needs: deploy-to-chromatic
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          registry-url: https://npm.pkg.github.com/
+      - run: yarn install --frozen-lockfile
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.MY_GITHUB_TOKEN}}
