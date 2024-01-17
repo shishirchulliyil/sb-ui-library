@@ -4,10 +4,17 @@
 name: Node.js Package
 
 on:
-  release:
-    types: [created]
+   # runs on pushes targeting the default branch
+  push: 
+    branches: [ "main" ]
+
+    # releases as versions
+    tags: [ "v*.*.*" ]
 
 jobs:
+  integration:
+    uses: 
+  
   build:
     runs-on: ubuntu-latest
     steps:
