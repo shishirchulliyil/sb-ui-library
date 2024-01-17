@@ -1,7 +1,9 @@
 {
-  "name": "sb-ui-library",
+  "name": "@shishirchulliyil/sb-ui-library",
   "version": "0.0.2",
   "type": "module",
+  "main": "dist/index.js",
+  "module": "src/index.js",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -9,9 +11,6 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/shishirchulliyil"
   },
   "peerDependencies": {
     "react": "^18.2.0",
